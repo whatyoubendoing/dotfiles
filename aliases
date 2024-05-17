@@ -1,0 +1,13 @@
+### Aliases ### 
+alias rm="echo Use 'trash', or the full path i.e. '/bin/rm'"
+alias zap="brew rm -zf"
+
+alias ..='cd ..' 
+alias ...='cd ../..' 
+alias ....='cd ../../..'
+alias .....='cd ../../../..'
+
+alias ll='ls -aFGhl'
+alias ls='ls -FG'
+
+alias dev="cd ${HOME}/Developer/"

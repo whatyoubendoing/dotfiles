@@ -1,0 +1,19 @@
+#!/usr/bin/env zsh
+
+function update!() {
+  sudo -v
+  
+  if [ -x "$(command -v brew)" ]; then
+    $(brew --prefix)/bin/brew update
+    $(brew --prefix)/bin/brew upgrade
+    $(brew --prefix)/bin/brew cleanup
+    $(brew --prefix)/bin/brew autoremove
+    $(brew --prefix)/bin/brew doctor
+  fi
+
+  if [ -x "$(command -v "/usr/sbin/softwareupdate")" ]; then
+    /usr/sbin/softwareupdate --install --all --include-config-data
+  fi
+}
+
+update!
