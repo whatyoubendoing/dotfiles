@@ -1,3 +1,5 @@
+# Amazon Q pre block. Keep at the top of this file.
+[[ -f "${HOME}/Library/Application Support/amazon-q/shell/zshrc.pre.zsh" ]] && builtin source "${HOME}/Library/Application Support/amazon-q/shell/zshrc.pre.zsh"
 ### Propmpt ### 
 eval "$(starship init zsh)"
 
@@ -22,9 +24,6 @@ HISTORY_SUBSTRING_SEARCH_PREFIXED=1
 bindkey '^[[A' history-substring-search-up
 bindkey '^[[B' history-substring-search-down
 
-###  Autosuggestions ### 
-source $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh
-
 ### Aliases ###
 source "$HOME/.aliases"
 
@@ -44,3 +43,6 @@ if type brew &>/dev/null; then
   autoload -Uz compinit
   compinit
 fi
+
+# Amazon Q post block. Keep at the bottom of this file.
+[[ -f "${HOME}/Library/Application Support/amazon-q/shell/zshrc.post.zsh" ]] && builtin source "${HOME}/Library/Application Support/amazon-q/shell/zshrc.post.zsh"

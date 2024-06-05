@@ -14,9 +14,9 @@ else
     git clone "git@github.com:${REPO}" "$DOTFILES"
 fi
 
-FILES=("zshrc" "aliases" "Brewfile" "functions")
+FILES=(".zshrc" ".aliases" ".Brewfile" ".functions")
 for FILE in "${FILES[@]}"; do
-    [ ! -e "${HOME}/.$FILE" ] && ln -s "${DOTFILES}/$FILE" "${HOME}/.$FILE"
+    [ ! -e "${HOME}/$FILE" ] && ln -s "${DOTFILES}/$FILE" "${HOME}/$FILE"
 done
 
 which brew > /dev/null 2>&1
@@ -44,8 +44,6 @@ defaults write com.apple.finder FXDefaultSearchScope -string "SCcf"
 defaults write com.apple.finder FXEnableExtensionChangeWarning -bool false
 defaults write com.apple.desktopservices DSDontWriteNetworkStores -bool true
 defaults write com.apple.desktopservices DSDontWriteUSBStores -bool true
-
-defaults write com.apple.terminal SecureKeyboardEntry -bool true
 
 # Enable sudo with Touch ID
 echo "auth       sufficient     pam_tid.so" | sudo tee "/etc/pam.d/sudo_local"                                                                        
