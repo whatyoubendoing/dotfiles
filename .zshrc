@@ -1,10 +1,11 @@
 # Amazon Q pre block. Keep at the top of this file.
 [[ -f "${HOME}/Library/Application Support/amazon-q/shell/zshrc.pre.zsh" ]] && builtin source "${HOME}/Library/Application Support/amazon-q/shell/zshrc.pre.zsh"
-### Propmpt ### 
+
+### Prompt ### 
 eval "$(starship init zsh)"
 
-### fnm ###
-eval "$(fnm env --use-on-cd)"
+### asdf ###
+source $(brew --prefix)/opt/asdf/libexec/asdf.sh
 
 ###  History ### 
 HISTFILE=${ZDOTDIR:-$HOME}/.zsh_history
