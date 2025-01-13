@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 sudo -v
 
-REPO=defeat00/dotfiles
+REPO=whatyoubendoing/dotfiles
 DOTFILES="${HOME}/Developer/dotfiles"
 
 mkdir -p "${HOME}/Developer"
@@ -44,6 +44,9 @@ defaults write com.apple.finder FXDefaultSearchScope -string "SCcf"
 defaults write com.apple.finder FXEnableExtensionChangeWarning -bool false
 defaults write com.apple.desktopservices DSDontWriteNetworkStores -bool true
 defaults write com.apple.desktopservices DSDontWriteUSBStores -bool true
+
+## Install inshellisense
+npm install -g @microsoft/inshellisense
 
 # Enable sudo with Touch ID
 echo "auth       sufficient     pam_tid.so" | sudo tee "/etc/pam.d/sudo_local"                                                                        
