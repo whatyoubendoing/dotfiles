@@ -2,8 +2,6 @@
 ### Prompt ### 
 eval "$(starship init zsh)"
 
-### asdf ###
-source $(brew --prefix)/opt/asdf/libexec/asdf.sh
 
 ###  History ### 
 HISTFILE=${ZDOTDIR:-$HOME}/.zsh_history
