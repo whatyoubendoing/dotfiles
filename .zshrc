@@ -20,6 +20,9 @@ setopt HIST_FIND_NO_DUPS
 setopt HIST_REDUCE_BLANKS
 setopt HIST_IGNORE_SPACE
 
+### inshellisense ###
+source ~/.inshellisense/zsh/init.zsh
+
 ###  History substring ###
 source $(brew --prefix)/share/zsh-history-substring-search/zsh-history-substring-search.zsh
 HISTORY_SUBSTRING_SEARCH_PREFIXED=1
