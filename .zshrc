@@ -2,6 +2,8 @@
 ### Prompt ### 
 eval "$(starship init zsh)"
 
+### autoenv ###
+source $(brew --prefix autoenv)/activate.sh
 
 ###  History ### 
 HISTFILE=${ZDOTDIR:-$HOME}/.zsh_history
