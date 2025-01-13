@@ -5,7 +5,10 @@ eval "$(starship init zsh)"
 ### autoenv ###
 source $(brew --prefix autoenv)/activate.sh
 
-###  History ### 
+### fnm ###
+eval "$(fnm env --use-on-cd --shell zsh)"
+
+### History ### 
 HISTFILE=${ZDOTDIR:-$HOME}/.zsh_history
 HISTSIZE=50000
 SAVEHIST=100000
