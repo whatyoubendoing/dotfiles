@@ -1,6 +1,4 @@
 ### Aliases ### 
-alias rm="echo Use 'trash', or the full path i.e. '/bin/rm'"
-
 alias ..='cd ..' 
 alias ...='cd ../..' 
 alias ....='cd ../../..'
