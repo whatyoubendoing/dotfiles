@@ -2,9 +2,6 @@
 ### Prompt ### 
 eval "$(starship init zsh)"
 
-### autoenv ###
-source $(brew --prefix autoenv)/activate.sh
-
 ### fnm ###
 eval "$(fnm env --use-on-cd --shell zsh)"
 
@@ -19,9 +16,6 @@ setopt HIST_IGNORE_DUPS
 setopt HIST_FIND_NO_DUPS
 setopt HIST_REDUCE_BLANKS
 setopt HIST_IGNORE_SPACE
-
-### inshellisense ###
-source ~/.inshellisense/zsh/init.zsh
 
 ###  History substring ###
 source $(brew --prefix)/share/zsh-history-substring-search/zsh-history-substring-search.zsh
