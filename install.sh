@@ -11,7 +11,7 @@ mkdir -p "${HOME}/Pictures/Screenshots"
 if [ -d "$DOTFILES/.git" ]; then
     cd "$DOTFILES" && git pull
 else
-    git clone "git@github.com:${REPO}" "$DOTFILES"
+    git clone https://github.com/${REPO} "$DOTFILES"
 fi
 
 FILES=(".zshrc" ".aliases" ".Brewfile" ".functions")
