@@ -6,12 +6,12 @@ DOTFILES="${HOME}/Developer/dotfiles"
 
 mkdir -p "${HOME}/Developer"
 mkdir -p "${HOME}/Documents"
-mkdir -p "${HOME}/Pictures/Screenshots"
+mkdir -p "${HOME}/Screenshots"
 
 if [ -d "$DOTFILES/.git" ]; then
     cd "$DOTFILES" && git pull
 else
-    git clone "git@github.com:${REPO}" "$DOTFILES"
+    git clone "https://github.com/${REPO}.git" "$DOTFILES"
 fi
 
 FILES=(".zshrc" ".aliases" ".Brewfile" ".functions")
@@ -46,4 +46,4 @@ defaults write com.apple.desktopservices DSDontWriteNetworkStores -bool true
 defaults write com.apple.desktopservices DSDontWriteUSBStores -bool true
 
 # Enable sudo with Touch ID
-echo "auth       sufficient     pam_tid.so" | sudo tee "/etc/pam.d/sudo_local"                                                                        
+echo "auth       sufficient     pam_tid.so" | sudo tee "/etc/pam.d/sudo_local"
